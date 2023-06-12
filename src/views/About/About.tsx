@@ -1,11 +1,7 @@
+import React from 'react';
 
+const About = (): React.ReactNode => {
+    return <div>about pages</div>;
+};
 
-const About = () :React.ReactNode => {
-
-    return (
-        <div>about pages</div>
-    )
-}
-
-
-export default About
+export default About;
