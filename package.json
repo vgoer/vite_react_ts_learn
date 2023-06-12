@@ -8,13 +8,33 @@
         "build": "tsc && vite build",
         "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "pre": "npx prettier --write .",
+        "pregit": "husky install",
+        "lint:lint-staged": "lint-staged",
         "preview": "vite preview"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "pnpm run lint --fix",
+            "npx prettier --write"
+        ],
+        "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+            "npx prettier --write--parser json"
+        ],
+        "package.json": [
+            "npx prettier --write"
+        ],
+        "*.{scss,less,styl,html}": [
+            "npx prettier --write"
+        ],
+        "*.md": [
+            "npx prettier --write"
+        ]
     },
     "dependencies": {
         "path-browserify": "^1.0.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-router-dom": "6"
+        "react-router-dom": "^6.12.1"
     },
     "devDependencies": {
         "@types/react": "^18.0.37",
@@ -23,8 +43,11 @@
         "@typescript-eslint/parser": "^5.59.0",
         "@vitejs/plugin-react-swc": "^3.0.0",
         "eslint": "^8.38.0",
+        "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.3.4",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.2",
         "prettier": "^2.8.8",
         "terser": "^5.17.7",
         "typescript": "^5.0.2",
