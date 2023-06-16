@@ -12,25 +12,9 @@
         "lint:lint-staged": "lint-staged",
         "preview": "vite preview"
     },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx}": [
-            "pnpm run lint --fix",
-            "npx prettier --write"
-        ],
-        "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
-            "npx prettier --write--parser json"
-        ],
-        "package.json": [
-            "npx prettier --write"
-        ],
-        "*.{scss,less,styl,html}": [
-            "npx prettier --write"
-        ],
-        "*.md": [
-            "npx prettier --write"
-        ]
-    },
+    
     "dependencies": {
+        "antd": "^5.6.1",
         "path-browserify": "^1.0.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
