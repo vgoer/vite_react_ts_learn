@@ -1,9 +1,11 @@
 import React from "react"
 
+import JgButton from "@/components/JgButton/Jgbutton"
+
 const Content :React.FC = () => {
 
     return (
-        <div>hello content</div>
+        <JgButton color="blue"></JgButton>
     )
 }
 
