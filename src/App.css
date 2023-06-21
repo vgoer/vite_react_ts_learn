@@ -1,4 +1,10 @@
-.nav-active {
-    color: red;
-    font-weight: bold;
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
