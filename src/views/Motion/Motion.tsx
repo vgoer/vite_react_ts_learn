@@ -8,14 +8,14 @@ const MotionButton: React.FC = styled(motion.div)`
     height:100px;
     border:none;
     cursor: pointer;
-    background-color:#fff;
+    background-color:#0dbff7;
     border-radius:20px;
 `
 
 
 const Motion: React.FC  = () => {
     return (
-        <div className="box">
+        <div className="box" style={{backgroundColor:'blue'}}>
             <motion.div
                 style={{
                     width:100,
